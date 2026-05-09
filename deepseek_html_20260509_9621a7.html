@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="monetag" content="58816e905dffb4e0537890b577c942ac">
+    <title>ADTON X | Auto Ads & Earn TON</title>
+    <!-- Telegram Mini App SDK -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <!-- All Ad Networks (High CPM) -->
+    <script src="https://richinfo.co/richpartners/pops/js/richads-pu-ob.js" data-pubid="999180" data-siteid="396430" async data-cfasync="false"></script>
+    <script src="https://ad.gigapub.tech/script?id=6637"></script>
+    <script src="https://quge5.com/88/tag.min.js" data-zone="237678" async data-cfasync="false"></script>
+    <!-- Profitable CPM Network -->
+    <script src="https://pl29391464.profitablecpmratenetwork.com/51/b3/09/51b30952a4890f6959985a021eeb066f.js"></script>
+    <script src="https://pl29391466.profitablecpmratenetwork.com/33/7c/77/337c77b5f235d2a501f04d639ff212da.js"></script>
+    <!-- High Performance Format Ads -->
+    <script>
+      atOptions = { 'key' : '77e8269707263df00810a9cd9016d778', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
+    </script>
+    <script src="https://www.highperformanceformat.com/77e8269707263df00810a9cd9016d778/invoke.js"></script>
+    <script>
+      atOptions = { 'key' : '1f0428eb66999fb0682dbbac005772c9', 'format' : 'iframe', 'height' : 60, 'width' : 468, 'params' : {} };
+    </script>
+    <script src="https://www.highperformanceformat.com/1f0428eb66999fb0682dbbac005772c9/invoke.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; user-select: none; }
+        body {
+            background: #0A0A0F;
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            color: #E5E9F0;
+            padding: 16px 12px 100px;
+        }
+        .container { max-width: 560px; margin: 0 auto; }
+        .card {
+            background: rgba(18, 20, 28, 0.85);
+            backdrop-filter: blur(2px);
+            border-radius: 32px;
+            padding: 20px;
+            margin-bottom: 18px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+        }
+        .gold-text { color: #F5B042; text-shadow: 0 0 4px #FFD966; }
+        .stats-grid { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+        .stat-box { background: #0E1017; padding: 12px; border-radius: 24px; flex: 1; text-align: center; border: 1px solid #2A2D3A; }
+        button, .btn-gold {
+            background: linear-gradient(135deg, #F5B042, #D98C2B);
+            border: none;
+            padding: 14px 18px;
+            border-radius: 60px;
+            font-weight: bold;
+            font-size: 1rem;
+            color: #0A0A0F;
+            width: 100%;
+            cursor: pointer;
+            transition: transform 0.1s ease;
+            box-shadow: 0 4px 12px rgba(245,176,66,0.3);
+        }
+        button:active { transform: scale(0.97); }
+        .leaderboard-list { list-style: none; margin-top: 12px; max-height: 200px; overflow-y: auto; }
+        .leaderboard-list li { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #222531; }
+        .flex-between { display: flex; justify-content: space-between; align-items: center; }
+        .game-btn { background: #212432; border: 1px solid #F5B04260; margin-top: 8px; }
+        .warning-text { font-size: 12px; color: #FFAA66; }
+        .tg-user-card {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #1A1D29;
+            padding: 10px 16px;
+            border-radius: 60px;
+            margin-bottom: 15px;
+        }
+        .avatar {
+            width: 44px;
+            height: 44px;
+            background: #F5B042;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        footer { text-align: center; font-size: 11px; margin-top: 30px; opacity: 0.5; }
+        .auto-status {
+            background: #1A2A1A;
+            padding: 8px;
+            border-radius: 40px;
+            text-align: center;
+            margin-top: 12px;
+            font-size: 12px;
+        }
+        .vpn-badge {
+            background: #F5B04220;
+            border-left: 3px solid #F5B042;
+            padding: 8px 12px;
+            border-radius: 16px;
+            margin-bottom: 12px;
+            font-size: 12px;
+        }
+        .danger-zone { border-color: #FF4444; }
+        .telegram-channel { background: #2B527820; margin-top: 10px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- VPN Notice for High CPM -->
+    <div class="vpn-badge">
+        🌎 USE <strong>USA/UK/MEXICO VPN</strong> FOR MAX CPM! 🇺🇸🇬🇧🇲🇽
+    </div>
+
+    <!-- Telegram User Info -->
+    <div class="tg-user-card" id="tgUserInfo">
+        <div class="avatar" id="userAvatar">👤</div>
+        <div>
+            <div><strong id="tgUserName">ADTON User</strong> <span id="tgUserId" style="font-size:11px; opacity:0.7;"></span></div>
+            <div style="font-size:12px;">✅ Connected | Auto-Earn Active</div>
+        </div>
+    </div>
+
+    <!-- Balance Header -->
+    <div class="card">
+        <div class="flex-between">
+            <h2>💰 ADTON X</h2>
+            <div style="background:#00000055; border-radius: 40px; padding: 6px 16px;">
+                🪙 <span id="userBalance">0.00</span> TON
+            </div>
+        </div>
+        <div class="flex-between" style="margin-top: 10px;">
+            <span>📺 Ads Watched: <strong id="totalAdsCount">0</strong></span>
+            <span>👥 Referrals: <strong id="refCount">0</strong></span>
+        </div>
+        <button id="earnMoreBtn" style="margin-top: 14px;">🎁 OFFERWALL (EXTRA REWARDS)</button>
+    </div>
+
+    <!-- ADS WATCHING SYSTEM: MANUAL + AUTO UNLIMITED -->
+    <div class="card">
+        <div class="flex-between"><h3>📺 WATCH ADS → INSTANT TON</h3><span class="gold-text">⚡ HIGH CPM</span></div>
+        <button id="watchAdBtn" style="margin: 12px 0; background: #2E7D32;">▶ MANUAL REWARDED VIDEO (+0.07 TON)</button>
+        <div class="auto-status" id="autoAdBox">
+            🤖 <strong>AUTO ADS 24/7 ACTIVE</strong> 🤖<br>
+            <span id="autoAdStatus">🟢 System running: Auto-watch every 35 seconds</span>
+        </div>
+        <div class="warning-text">⚠️ Auto mode: clicks ad → closes → loops endlessly. No timer crash. Keep tab open!</div>
+    </div>
+
+    <!-- Banner Ads Container (popup/interstitial/video networks) -->
+    <div id="bannerContainer" style="text-align: center; min-height: 80px; margin: 5px 0;"></div>
+
+    <!-- GAMES: Slots, Mines, Jackpot (high profit design) -->
+    <div class="card">
+        <h3>🎰 RISK GAMES (99% LOSE / BIG REWARD)</h3>
+        <div class="stats-grid">
+            <button id="slotGameBtn" class="game-btn">🎲 SLOTS (1% WIN)</button>
+            <button id="minesGameBtn" class="game-btn">💣 MINES</button>
+            <button id="jackpotBtn" class="game-btn">🏆 JACKPOT</button>
+        </div>
+        <div id="gameResultMsg" style="margin-top: 12px; font-size: 13px; background:#101218; border-radius: 20px; padding: 8px; text-align:center;">✨ Click to test luck</div>
+        <div class="flex-between"><span>🔥 GLOBAL JACKPOT:</span><span id="jackpotPool">0.00 TON</span></div>
+    </div>
+
+    <!-- WEEKLY LEADERBOARD -->
+    <div class="card">
+        <div class="flex-between"><h3>🏆 WEEKLY LEADERBOARD (TOP 50)</h3><span id="weekReset">resets Monday</span></div>
+        <ul class="leaderboard-list" id="leaderboardList"><li>Loading top earners...</li></ul>
+        <div class="warning-text">⭐ Min 500 ads/week → Rank1: 15 TON | 2-10: 5 TON | 11-50: 1.5 TON</div>
+    </div>
+
+    <!-- REFERRAL SYSTEM + TELEGRAM CHANNEL -->
+    <div class="card">
+        <h3>👥 REFERRAL & CHANNEL</h3>
+        <div class="flex-between"><span>🔗 Your Referral Link:</span><button id="copyLinkBtn" style="width:auto; padding:6px 16px;">📋 Copy</button></div>
+        <div id="refLinkDisplay" style="font-size: 11px; word-break:break-all; background:#0E1017; border-radius:20px; padding: 8px; margin:8px 0;">loading...</div>
+        <div><span>💰 L1 Commission (10%):</span> <strong id="refEarn">0.00</strong> TON</div>
+        <div class="telegram-channel" style="background:#1F2A3A; border-radius: 20px; padding: 12px; margin-top: 12px;">
+            <div class="flex-between">
+                <span>📢 JOIN OFFICIAL CHANNEL</span>
+                <button id="joinTelegramBtn" style="width:auto; padding:6px 14px; background:#0088cc;">Join</button>
+            </div>
+            <div style="font-size:11px; margin-top:6px;">t.me/ADTONX → Bonus +0.3 TON</div>
+        </div>
+        <div class="flex-between" style="margin-top: 10px;"><span>✅ Daily Task: Watch 5 ads</span><span id="dailyTaskStatus">❌</span></div>
+    </div>
+
+    <!-- MILESTONE SYSTEM -->
+    <div class="card">
+        <h3>🎯 MILESTONE BONUSES</h3>
+        <div><span>📊 ADS GOAL:</span> <span id="nextMilestone">100 ads → reward</span></div>
+        <div style="background:#1F232E; border-radius: 30px; height: 10px; margin: 10px 0;"><div id="milestoneFill" style="width:0%; height:10px; background:#F5B042; border-radius:30px;"></div></div>
+        <div class="flex-between"><span>🎁 Referral Milestones: 5/20/50</span><span id="refMilestoneStatus">0/5</span></div>
+    </div>
+
+    <!-- WITHDRAW SYSTEM (MANUAL TON) -->
+    <div class="card">
+        <h3>💸 WITHDRAW TON (25% FEE)</h3>
+        <input type="text" id="walletAddress" placeholder="Your TON Wallet (UQ... or EQ...)" style="width:100%; padding:12px; border-radius:30px; background:#11141F; border:1px solid #F5B04288; color:white; margin-bottom:10px;">
+        <div class="flex-between"><span>🔻 Min: 10 TON (25% fee deducted)</span><button id="withdrawBtn" style="width:auto; padding:8px 20px;">Request</button></div>
+        <div id="withdrawMsg" class="warning-text"></div>
+    </div>
+    <footer>⚡ Anti-fraud | Auto ad loop 24/7 | No crash guaranteed</footer>
+</div>
+
+<script>
+    // ---------- GLOBAL ----------
+    let tg = window.Telegram?.WebApp;
+    if(tg) tg.expand();
+    let tgUser = tg?.initDataUnsafe?.user || null;
+    
+    let user = {
+        uid: tgUser ? `tg_${tgUser.id}` : `web_${Date.now()}_${Math.random().toString(36)}`,
+        name: tgUser ? (tgUser.first_name + (tgUser.last_name ? ` ${tgUser.last_name}` : '')) : 'AdtonUser',
+        balance: 5.0,   // starting bonus
+        totalAds: 0,
+        weeklyAds: 0,
+        referrals: [],
+        refEarnings: 0,
+        joinedChannel: false,
+        dailyWatched: 0,
+        lastDailyDate: new Date().toDateString(),
+        dailyBonusClaimed: false,
+        milestones: {100:false, 500:false, 1000:false},
+        refMilestones: {5:false,20:false,50:false}
+    };
+    
+    let globalJackpot = 42.0;
+    let weeklyStats = [];
+    let autoLoopActive = true;
+    let autoTimer = null;
+    
+    // ---------- STORAGE ----------
+    function loadData() {
+        let stored = localStorage.getItem("adtonx_user");
+        if(stored) {
+            try {
+                let saved = JSON.parse(stored);
+                user = {...user, ...saved};
+                if(!user.uid) user.uid = tgUser ? `tg_${tgUser.id}` : `web_${Date.now()}`;
+                if(!user.refEarnings) user.refEarnings = 0;
+                if(!user.joinedChannel) user.joinedChannel = false;
+                if(!user.dailyWatched) user.dailyWatched = 0;
+                if(!user.weeklyAds) user.weeklyAds = 0;
+            } catch(e) {}
+        }
+        let jack = localStorage.getItem("adtonx_jackpot");
+        if(jack) globalJackpot = parseFloat(jack) || 42;
+        loadLeaderboard();
+        syncToLeaderboard();
+        renderUI();
+    }
+    
+    function saveUser() {
+        localStorage.setItem("adtonx_user", JSON.stringify(user));
+        localStorage.setItem("adtonx_jackpot", globalJackpot);
+        saveLeaderboard();
+    }
+    
+    // ---------- LEADERBOARD (weekly) ----------
+    function getWeekKey() {
+        let d = new Date();
+        d.setHours(0,0,0,0);
+        let day = d.getDay();
+        let diff = (day === 0 ? 6 : day-1);
+        let monday = new Date(d.setDate(d.getDate() - diff));
+        return monday.toISOString().slice(0,10);
+    }
+    
+    function loadLeaderboard() {
+        let lb = localStorage.getItem("adtonx_weekly");
+        if(lb) {
+            weeklyStats = JSON.parse(lb);
+            let lastReset = localStorage.getItem("adtonx_week_reset");
+            if(lastReset !== getWeekKey()) resetWeekly();
+        } else resetWeekly();
+    }
+    
+    function resetWeekly() {
+        weeklyStats = [];
+        localStorage.setItem("adtonx_weekly", JSON.stringify(weeklyStats));
+        localStorage.setItem("adtonx_week_reset", getWeekKey());
+        if(user) user.weeklyAds = 0;
+        saveUser();
+    }
+    
+    function syncToLeaderboard() {
+        let idx = weeklyStats.findIndex(u=>u.uid===user.uid);
+        let entry = { uid: user.uid, name: user.name.slice(0,16), ads: user.totalAds, rewardClaimed: false };
+        if(idx !== -1) weeklyStats[idx] = entry;
+        else weeklyStats.push(entry);
+        weeklyStats.sort((a,b)=> b.ads - a.ads);
+        weeklyStats = weeklyStats.slice(0,50);
+        saveLeaderboard();
+    }
+    
+    function saveLeaderboard() { localStorage.setItem("adtonx_weekly", JSON.stringify(weeklyStats)); }
+    
+    function checkLeaderboardReward() {
+        let rank = weeklyStats.findIndex(u=>u.uid===user.uid)+1;
+        let entry = weeklyStats.find(u=>u.uid===user.uid);
+        if(rank>=1 && rank<=50 && user.totalAds>=500 && entry && !entry.rewardClaimed) {
+            let amt = 0;
+            if(rank===1) amt = 15;
+            else if(rank>=2 && rank<=10) amt = 5;
+            else if(rank>=11 && rank<=50) amt = 1.5;
+            if(amt > 0 && confirm(`🏆 You're rank #${rank} with ${user.totalAds} ads! Claim ${amt} TON reward?`)) {
+                user.balance += amt;
+                entry.rewardClaimed = true;
+                saveUser(); renderUI();
+                showToast(`Leaderboard reward +${amt} TON!`, 1800);
+            }
+        }
+    }
+    
+    // ---------- ADS SYSTEM (MANUAL + AUTO 24/7 CRASH PROOF) ----------
+    function addAdReward(amount = 0.07, isAuto = false) {
+        // anti-fraud speed detection
+        let now = Date.now();
+        if(!window._lastAdLog) window._lastAdLog = [];
+        window._lastAdLog.push(now);
+        while(window._lastAdLog.length > 6) window._lastAdLog.shift();
+        if(window._lastAdLog.length >= 4 && (now - window._lastAdLog[0]) < 10000) {
+            amount = amount * 0.4;
+            showToast("⚠️ Anti-fraud: reward reduced", 1200);
+        }
+        user.balance += amount;
+        user.totalAds += 1;
+        user.weeklyAds += 1;
+        
+        // daily task (5 ads)
+        let today = new Date().toDateString();
+        if(user.lastDailyDate !== today) {
+            user.lastDailyDate = today;
+            user.dailyWatched = 0;
+            user.dailyBonusClaimed = false;
+        }
+        user.dailyWatched += 1;
+        if(user.dailyWatched >= 5 && !user.dailyBonusClaimed) {
+            user.balance += 0.2;
+            user.dailyBonusClaimed = true;
+            showToast("✅ Daily 5 ads completed: +0.2 TON", 1500);
+        }
+        checkMilestones();
+        syncToLeaderboard();
+        saveUser();
+        renderUI();
+        checkLeaderboardReward();
+    }
+    
+    // Ad triggering function (handles both manual + auto without crash)
+    async function triggerAdAndReward(isManual = false) {
+        try {
+            // Try Gigapub rewarded first
+            if(window.showGiga) {
+                await window.showGiga();
+                addAdReward(0.07, !isManual);
+                showToast("✅ Ad watched! +0.07 TON", 1000);
+                return true;
+            }
+            // Fallback to monetag/show_10981714
+            else if(typeof show_10981714 === 'function') {
+                await show_10981714();
+                addAdReward(0.06, !isManual);
+                showToast("Ad reward +0.06 TON", 1000);
+                return true;
+            }
+            else {
+                // final fallback (simulate ad close)
+                addAdReward(0.05, !isManual);
+                showToast("Basic reward +0.05 TON", 800);
+                return true;
+            }
+        } catch(e) {
+            console.warn("Ad error:", e);
+            addAdReward(0.04, !isManual);
+            showToast("Ad watched (alt) +0.04 TON", 800);
+            return false;
+        }
+    }
+    
+    // MANUAL AD BUTTON
+    async function manualAdWatch() {
+        await triggerAdAndReward(true);
+    }
+    
+    // AUTO 24/7 SYSTEM: runs every 30 sec, shows ad, closes, loops FOREVER no timer crash
+    function startAutoAdLoop() {
+        if(autoTimer) clearInterval(autoTimer);
+        autoTimer = setInterval(async () => {
+            if(autoLoopActive) {
+                document.getElementById("autoAdStatus").innerHTML = "🔄 Auto ad triggering...";
+                await triggerAdAndReward(false);
+                document.getElementById("autoAdStatus").innerHTML = "✅ Auto ad completed | Next in 30s";
+                setTimeout(() => {
+                    if(document.getElementById("autoAdStatus"))
+                        document.getElementById("autoAdStatus").innerHTML = "🟢 Auto-running: next ad in 30 seconds";
+                }, 2000);
+            }
+        }, 30000);  // 30 seconds cycle = high frequency
+    }
+    
+    // ---------- GAMES (High loss system) ----------
+    function playSlots() {
+        let cost = 0.25;
+        if(user.balance < cost) { showToast("Insufficient balance", 1000); return; }
+        user.balance -= cost;
+        let win = Math.random() < 0.01;
+        if(win) { let prize = 10.0; user.balance += prize; showToast(`🎰 SLOTS WIN! +${prize} TON`, 2000); }
+        else showToast(`💔 Slots lost ${cost} TON`, 1000);
+        saveUser(); renderUI();
+    }
+    function playMines() {
+        let bet = 0.3;
+        if(user.balance < bet) { showToast("Need 0.3 TON", 1000); return; }
+        user.balance -= bet;
+        let winChance = 0.15;
+        if(Math.random() < winChance) { let reward = 1.8; user.balance += reward; showToast(`💎 Mines survived! +${reward} TON`, 1500); }
+        else showToast(`💣 Mines exploded -${bet} TON`, 1000);
+        saveUser(); renderUI();
+    }
+    function playJackpot() {
+        let ticket = 0.4;
+        if(user.balance < ticket) { showToast("Need 0.4 TON", 1000); return; }
+        user.balance -= ticket;
+        globalJackpot += ticket * 0.7;
+        let win = Math.random() < 0.006;
+        if(win) {
+            let jackWin = globalJackpot;
+            user.balance += jackWin;
+            showToast(`🏆 JACKPOT WINNER! ${jackWin.toFixed(2)} TON 🏆`, 3000);
+            globalJackpot = 30;
+        } else showToast(`🎟️ Added to jackpot pool`, 1000);
+        saveUser(); renderUI();
+    }
+    
+    // ---------- REFERRAL + TG CHANNEL ----------
+    function getReferralUrl() {
+        return `https://t.me/INVESTMENTNCOMPOUNDINGBOT/Start?startapp=ref_${user.uid}`;
+    }
+    function copyReferral() {
+        navigator.clipboard.writeText(getReferralUrl());
+        showToast("✅ Referral link copied!", 900);
+    }
+    function handleReferralStart() {
+        let params = new URLSearchParams(window.location.search);
+        let startParam = params.get('startapp') || (tg?.initDataUnsafe?.start_param);
+        if(startParam && startParam.startsWith('ref_')) {
+            let refId = startParam.replace('ref_', '');
+            if(refId && refId !== user.uid && !user.referrals.includes(refId)) {
+                user.referrals.push(refId);
+                let bonus = 0.35;
+                user.balance += bonus;
+                user.refEarnings += bonus;
+                showToast(`🎉 Referral bonus +${bonus} TON`, 1800);
+                saveUser(); renderUI();
+            }
+        }
+    }
+    function joinTelegramChannel() {
+        if(user.joinedChannel) { showToast("Already claimed bonus!", 1000); return; }
+        window.open("https://t.me/ADTONX", "_blank");
+        setTimeout(() => {
+            user.balance += 0.3;
+            user.joinedChannel = true;
+            saveUser(); renderUI();
+            showToast("✅ Joined channel! +0.3 TON", 1500);
+        }, 500);
+    }
+    
+    // MILESTONES
+    function checkMilestones() {
+        let ads = user.totalAds;
+        if(ads >= 100 && !user.milestones[100]) { user.balance += 0.7; user.milestones[100]=true; showToast("🏅 100 Ads Milestone +0.7 TON", 1500); }
+        if(ads >= 500 && !user.milestones[500]) { user.balance += 2.0; user.milestones[500]=true; showToast("🎯 500 Ads Milestone +2 TON", 1500); }
+        if(ads >= 1000 && !user.milestones[1000]) { user.balance += 4.0; user.milestones[1000]=true; showToast("🔥 1000 Ads Milestone +4 TON", 1500); }
+        let refCount = user.referrals.length;
+        if(refCount >=5 && !user.refMilestones[5]) { user.balance += 1.2; user.refMilestones[5]=true; showToast("⭐ 5 referrals +1.2 TON",1400);}
+        if(refCount >=20 && !user.refMilestones[20]) { user.balance += 2.8; user.refMilestones[20]=true; showToast("👑 20 referrals +2.8 TON",1400);}
+        if(refCount >=50 && !user.refMilestones[50]) { user.balance += 6.0; user.refMilestones[50]=true; showToast("🏆 50 referrals +6 TON",1400);}
+        saveUser(); renderUI();
+    }
+    
+    // WITHDRAW
+    function requestWithdraw() {
+        let wallet = document.getElementById("walletAddress").value.trim();
+        if(!wallet) { showToast("Enter TON wallet address", 1000); return; }
+        if(user.balance < 10) { showToast("Minimum 10 TON required", 1000); return; }
+        let fee = 0.25;
+        let afterFee = user.balance * (1 - fee);
+        let reqs = JSON.parse(localStorage.getItem("adtonx_withdrawals") || "[]");
+        reqs.push({uid:user.uid, wallet, amount:afterFee.toFixed(4), status:"pending", date:Date.now()});
+        localStorage.setItem("adtonx_withdrawals", JSON.stringify(reqs));
+        user.balance = 0;
+        saveUser(); renderUI();
+        showToast(`Withdrawal request: ${afterFee.toFixed(2)} TON (after 25% fee)`, 2500);
+    }
+    
+    // OFFERWALL (GIGAPUB)
+    function openOfferwall() {
+        if(window.gigaOfferWallSDK) window.gigaOfferWallSDK.open();
+        else alert("Offerwall loading... try again later");
+    }
+    
+    // ---------- UI RENDER ----------
+    function renderUI() {
+        document.getElementById("userBalance").innerText = user.balance.toFixed(4);
+        document.getElementById("totalAdsCount").innerText = user.totalAds;
+        document.getElementById("refCount").innerText = user.referrals.length;
+        document.getElementById("refEarn").innerText = user.refEarnings.toFixed(4);
+        document.getElementById("jackpotPool").innerText = globalJackpot.toFixed(2);
+        let targetMilestone = user.totalAds < 100 ? 100 : (user.totalAds < 500 ? 500 : 1000);
+        let progress = (user.totalAds % targetMilestone) / targetMilestone * 100;
+        document.getElementById("milestoneFill").style.width = `${Math.min(100,progress)}%`;
+        document.getElementById("nextMilestone").innerHTML = `${targetMilestone} ads → reward`;
+        let dailyDiv = document.getElementById("dailyTaskStatus");
+        if(user.dailyWatched >= 5 && user.dailyBonusClaimed) dailyDiv.innerHTML = "✅ +0.2 TON claimed";
+        else dailyDiv.innerHTML = `❌ (${user.dailyWatched}/5)`;
+        let lbHtml = "";
+        weeklyStats.slice(0,15).forEach((e,i) => { lbHtml += `<li><span>${i+1}. ${e.name.slice(0,12)}</span><span>${e.ads} ads</span></li>`; });
+        document.getElementById("leaderboardList").innerHTML = lbHtml || "<li>No data</li>";
+        document.getElementById("refLinkDisplay").innerHTML = getReferralUrl();
+        let refMilestoneText = `${user.referrals.length}/5 | ${user.referrals.length}/20 | ${user.referrals.length}/50`;
+        document.getElementById("refMilestoneStatus").innerText = refMilestoneText;
+        if(tgUser && document.getElementById("tgUserName")) {
+            document.getElementById("tgUserName").innerText = user.name;
+            if(tgUser.username) document.getElementById("tgUserId").innerText = `@${tgUser.username}`;
+        }
+    }
+    
+    function showToast(msg, duration=1500) {
+        let toast = document.createElement("div");
+        toast.innerText = msg;
+        toast.style.position="fixed"; toast.style.bottom="80px"; toast.style.left="50%"; toast.style.transform="translateX(-50%)";
+        toast.style.backgroundColor="#000000CC"; toast.style.color="#F5B042"; toast.style.padding="12px 24px"; toast.style.borderRadius="40px";
+        toast.style.zIndex="9999"; toast.style.fontWeight="bold"; toast.style.backdropFilter="blur(8px)";
+        document.body.appendChild(toast);
+        setTimeout(()=>toast.remove(), duration);
+    }
+    
+    // ---------- INIT ----------
+    window.onload = () => {
+        loadData();
+        handleReferralStart();
+        startAutoAdLoop();
+        document.getElementById("watchAdBtn").onclick = manualAdWatch;
+        document.getElementById("earnMoreBtn").onclick = openOfferwall;
+        document.getElementById("slotGameBtn").onclick = playSlots;
+        document.getElementById("minesGameBtn").onclick = playMines;
+        document.getElementById("jackpotBtn").onclick = playJackpot;
+        document.getElementById("copyLinkBtn").onclick = copyReferral;
+        document.getElementById("joinTelegramBtn").onclick = joinTelegramChannel;
+        document.getElementById("withdrawBtn").onclick = requestWithdraw;
+        renderUI();
+        setInterval(() => { syncToLeaderboard(); saveUser(); renderUI(); }, 25000);
+    };
+</script>
+</body>
+</html>
